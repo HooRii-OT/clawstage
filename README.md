@@ -121,6 +121,95 @@ The images below show a more complete and assembled prototype, demonstrating how
 
 ---
 
+## 🧠 PCB Revision Gallery
+
+### Rev B01 (11/18/2025)
+
+<table width="100%">
+  <tr>
+    <td align="center" width="33%">
+      <img src="assets/images/rev-b01-top.jpg" width="420" />
+      <br />
+      <b>Top View</b>
+    </td>
+    <td align="center" width="33%">
+      <img src="assets/images/rev-b01-bottom.jpg" width="420" />
+      <br />
+      <b>Bottom View</b>
+    </td>
+    <td align="center" width="33%">
+      <img src="assets/images/rev-b01-3d.jpg" width="420" />
+      <br />
+      <b>3D Render</b>
+    </td>
+  </tr>
+</table>
+
+**Overview**
+
+Rev B01 is the first fully integrated core PCB for **HooRii Stage**.  
+It establishes the baseline hardware architecture and validates the complete system design, including storage, power, and expansion interfaces.
+
+### Rev B02 (12/17/2025)
+
+<table width="100%">
+  <tr>
+    <td align="center" width="33%">
+      <img src="assets/images/rev-b02-top.jpg" width="420" />
+      <br />
+      <b>Top View</b>
+    </td>
+    <td align="center" width="33%">
+      <img src="assets/images/rev-b02-bottom.jpg" width="420" />
+      <br />
+      <b>Bottom View</b>
+    </td>
+    <td align="center" width="33%">
+      <img src="assets/images/rev-b02-3d.jpg" width="420" />
+      <br />
+      <b>3D Render</b>
+    </td>
+  </tr>
+</table>
+
+**Changes from Rev B01**
+
+- Simplified PCB layout by transitioning from a dual-sided design to a single-sided design  
+- Added interface support for an ambient light sensor  
+- Updated NVMe SSD compatibility from 2242 to 2230 form factor  
+- Reworked the power button to use Raspberry Pi native power control interface  
+- Enhanced the privacy switch to control both the microphone and camera simultaneously (previously microphone only)
+
+### Rev B03 (1/22/2026)
+
+<table width="100%">
+  <tr>
+    <td align="center" width="33%">
+      <img src="assets/images/rev-b03-top.jpg" width="420" />
+      <br />
+      <b>Top View</b>
+    </td>
+    <td align="center" width="33%">
+      <img src="assets/images/rev-b03-bottom.jpg" width="420" />
+      <br />
+      <b>Bottom View</b>
+    </td>
+    <td align="center" width="33%">
+      <img src="assets/images/rev-b03-3d.jpg" width="420" />
+      <br />
+      <b>3D Render</b>
+    </td>
+  </tr>
+</table>
+
+**Changes from Rev B02**
+
+- Added a dedicated microphone power selection switch; when enabled, microphone power is no longer controlled by the privacy switch  
+- Added a hardware factory reset button  
+- Introduced a fan connector and additional ventilation openings for improved thermal management  
+- Optimized connector placement and overall interface layout  
+- Fine-tuned audio circuit parameters for improved performance
+
 ## 🎪 CES 2026 Showcase
 
 HooRii Stage made its debut at **CES 2026**, showcasing the future of HomeAI to the world. The images below capture the device in action at the exhibition, demonstrating its physical presence and interaction capabilities.
