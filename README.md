@@ -185,7 +185,7 @@ It establishes the baseline hardware architecture and validates the complete sys
 
 - Simplified PCB layout by transitioning from a dual-sided design to a single-sided design
 - Added interface support for an ambient light sensor
-- Updated NVMe SSD compatibility from 2242 to 2230 form factor
+- Updated NVMe SSD support to include both M.2 2230 and 2242 form factors
 - Reworked the power button to use Raspberry Pi native power control interface
 - Enhanced the privacy switch to control both the microphone and camera simultaneously (previously microphone only)
 
