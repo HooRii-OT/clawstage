@@ -153,6 +153,34 @@ High-level hardware summary for ClawStage. _Specifications may change with produ
 
 ---
 
+## 🔇 Privacy Switch
+
+ClawStage includes a **hardware privacy switch** so you can cut off sensing when you want the device not to see or hear. On the enclosure it sits **just below the Ethernet connector**. Flip it to **enable or disable** both the **camera** and the **dual-microphone array** together at the hardware level—without relying on software alone.
+
+### Microphone Mute Logic
+
+The circuit uses **SW1** as the mute switch, **SW2** as the mute-control enable selector, **Q8 (AO3401A)** to switch **VDD_MIC**, and **U25 (74LVC125A)** to gate the microphone digital interface.
+
+Schematic: [`assets/schematics/SCH_Audio_XMOS_MuteControl.pdf`](assets/schematics/SCH_Audio_XMOS_MuteControl.pdf).
+
+> ⚠️ Note: PCB revisions may introduce design changes. Please refer to the **PCB Revision Gallery** for the latest details.
+
+When mute is active, the microphone array is silenced in two ways:
+
+1. **Power removed** — **Q8** disconnects **VDD_MIC**, powering down the microphone array.  
+2. **Digital interface gated** — **U25** disables the **DATA** and **CLOCK** paths so no valid microphone samples reach the processor.
+
+Together, muting happens at both **power** and **signal** levels.
+
+**SW2** selects whether **SW1** applies to the array, via **MIC_EN_STAT**:
+
+- **`MIC_EN_STAT = 1`** — the microphone array follows the mute switch (**SW1**).  
+- **`MIC_EN_STAT = 0`** — the microphone array is **not** controlled by **SW1**.
+
+With **SW2** set so that mute control applies, toggling **SW1** removes **VDD_MIC** and gates the data/clock lines, fully muting the microphone array. With **SW2** set to bypass mute control, **SW1** does not affect the microphone array.
+
+---
+
 ## 🧩 Hardware Prototype
 
 Below is an early **ClawStage hardware prototype**, illustrating the modular and extensible nature of the platform during development. The prototype integrates key components such as the compute module, display, camera, microphone array, and speakers, bringing AI characters into the physical world.
@@ -263,3 +291,12 @@ It establishes the baseline hardware architecture and validates the complete sys
 Experience the future of belonging with AI.
 
 👉 [https://clawstage.ai/](https://clawstage.ai/)
+
+## ⭐ Star History
+<a href="https://star-history.com/#HooRii-OT/clawstage&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=HooRii-OT/clawstage&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=HooRii-OT/clawstage&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=HooRii-OT/clawstage&type=Date" />
+  </picture>
+</a>
