@@ -28,6 +28,14 @@ It's a **home with a soul** — one you created.
   </a>
 </p>
 
+> ▶️ Watch the project overview: It's Been a Good Run, ISPs.
+
+<p align="center">
+  <a href="https://youtu.be/6ibr7gm8uVA">
+    <img src="assets/images/youtube-video-4.png" alt="It's Been a Good Run, ISPs." width="800" />
+  </a>
+</p>
+
 > ▶️ Watch the project overview: A Real AI Assistant is Here 🔥🔥
 
 <p align="center">
